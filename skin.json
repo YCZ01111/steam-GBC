@@ -1,0 +1,18 @@
+{
+    "name": "GBC",
+    "author": "Y_C_Z",
+    "description": "background of GBC by Y_C_Z",
+
+    "github": {
+        "owner": "YCZ01111",
+        "repo_name": "steam-GBC"
+    },
+    "tags": [
+        "Example",
+        "Template"
+    ],
+    "version": "1.0.0",
+
+    "Steam-WebKit": "webkit.css",
+    "UseDefaultPatches": true
+}
