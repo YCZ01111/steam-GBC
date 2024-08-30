@@ -11,7 +11,7 @@
         "Example",
         "Template"
     ],
-    "version": "1.0.1",
+    "version": "1.0.2",
 
     "Steam-WebKit": "webkit.css",
     "UseDefaultPatches": true
