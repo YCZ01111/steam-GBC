@@ -1,4 +1,6 @@
 @echo off
+%1 start "" mshta vbscript:createobject("shell.application").shellexecute("""%~0""","::",,"runas",1)(window.close)&exit
+cd /d %~dp0
 FOR /F "tokens=2* skip=2" %%a in ('reg query "HKCU\Software\Valve\Steam" /v "SteamPath"') do set SteamPath=%%b
 REM If return value is not an exist path(Err Msg)
 if not exist "%SteamPath%" (
