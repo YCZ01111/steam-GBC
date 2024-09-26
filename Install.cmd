@@ -55,12 +55,26 @@ xcopy /e /y "..\%CurDirName%\" "%SteamPath%\steamui\skins\%CurDirName%\"
 del /f /q "%SteamPath%\steamui\skins\%CurDirName%\Install.cmd"
 echo.
 if exist "%SteamPath%\steamui\skins\%CurDirName%\skin.json" (
-    echo.
-    call :_color2 %_White% "" %Green% "皮肤安装成功"
-    echo.
-    echo 请按“回车”前往自定义......&pause>nul
-    cd /d "%SteamPath%\steamui\skins\%CurDirName%"
-    start skintool.exe .
+    if exist "%SteamPath%\steamui\skins\%CurDirName%\libraryroot.custom.css" (
+        if exist "%SteamPath%\steamui\skins\%CurDirName%\webkit.css" (
+            echo.
+            call :_color2 %_White% "" %Green% "皮肤安装成功"
+            echo.
+            echo 请按“回车”前往自定义......&pause>nul
+            cd /d "%SteamPath%\steamui\skins\%CurDirName%"
+            start skintool.exe .
+        ) else (
+            call :Error
+            echo 请按“回车”打开skins文件夹......&pause>nul
+            cd /d "%SteamPath%\steamui\skins"
+            start explorer.exe .
+        )
+    ) else (
+        call :Error
+        echo 请按“回车”打开skins文件夹......&pause>nul
+        cd /d "%SteamPath%\steamui\skins"
+        start explorer.exe .
+    )
 ) else (
     call :Error
     echo 请按“回车”打开skins文件夹......&pause>nul
