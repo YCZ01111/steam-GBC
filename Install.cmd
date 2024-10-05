@@ -81,5 +81,8 @@ if exist "%SteamPath%\steamui\skins\%CurDirName%\skin.json" (
     cd /d "%SteamPath%\steamui\skins"
     start explorer.exe .
 )
+if exist "%~dp0\..\rename.cmd" (
+    del /f /q "%~dp0\..\rename.cmd"
+)
 ping 127.0.0.1 -n 1 > nul
 del "%~f0"
