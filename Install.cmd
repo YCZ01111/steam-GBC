@@ -1,5 +1,7 @@
 @echo off
-%1 start "" mshta vbscript:createobject("shell.application").shellexecute("""%~0""","::",,"runas",1)(window.close)&exit
+fltmc >nul 2>&1 || (
+    powershell -Command "Start-Process -FilePath '%0' -Verb RunAs" >nul 2>&1 && exit
+)
 cd /d %~dp0
 for /F %%c in ('echo prompt $E ^| cmd') do set "esc=%%c"
 
