@@ -1,0 +1,60 @@
+:root {
+	/* 
+    * @name light
+    * @description lighttheme
+    */
+	--main: 255, 255, 255 !important;
+	--list-1: 214, 208, 196 !important;
+	--list-2: 193, 177, 150 !important;
+	--fonts: black;
+	--msg-hover: #D6D3CB;
+}
+
+
+.QsvsRVwbsApgKt1MhM0fz *:not(._1NBr0Hdw3P-7Q6P5UXs96Y *):not(._1NBr0Hdw3P-7Q6P5UXs96Y *):not(.MillenniumSettings *):not(.MillenniumDesktopSidebar *):not(.ModalPosition_Content *):not(.visible *):not(._3GCEyyVil-cCS-8hoI2Zo1 *):not(._3Rb_j3lgHaVVIud4Gla7_m *):not(._1fuML-ekRbTEzgzC597yGP *):not(._3b_pllMxcr_an1aQ5goWvB *) {
+	color: rgb(0, 0, 0) !important;
+}
+
+.friendlist *:not(.online *), .multiChatDialog *:not(.online *) {
+	color: rgb(0, 0, 0) !important;
+}
+
+._2Dd4T78PcCTUVgOtDGFY5j /*库内容渐变*/{
+	background: rgba(var(--main), 0.3) !important;
+}
+
+._2-O4ZG0KrnSrzISHBKctFQ:hover/*库列表悬停*/ {
+	background-color: rgba(205, 197, 180, 0.5);
+}
+
+._1UBpAXP408Ez_L_mXhW5Q9/*库列表选中*/ {
+	background-color: #c1b196 !important;
+}
+
+._1UBpAXP408Ez_L_mXhW5Q9._2-O4ZG0KrnSrzISHBKctFQ :hover/*库列表选中悬停*/ {
+	background-color: #a79069 !important;
+}
+
+._1HZy7BvOZuPT8feUwadL4W, .LibriMVXcLl1HB60ZUp78 {
+	background: transparent !important;
+}
+
+._1AYE16384J_ecLpN0sEYc5/*游戏更新卡片*/ {
+	background: radial-gradient(100% 80% at 64% 95%, rgba(148, 140, 128, 0.3) 0%, rgba(193, 185, 175, 0.5) 20%, rgba(219, 215, 208, 0.5) 100%);
+}
+
+._3oMUSjOFNB0E9LWcL2sE7, ._39Zk32AvV5cr6g-83IVRVS/*重大更新卡片*/ {
+	background: linear-gradient(to right, #E6600000 0%, #E6600040 18px, #E66000 18px, #E66000 22px);
+}
+
+._38t1mljBjmJfqjpVzMT1CG/*成就解锁*/ {
+	background: transparent;
+}
+
+._3fLo166MlaNqP8r8tTyRz {
+	background: rgba(216, 211, 202, 0.3) !important;
+}
+
+._3Tfp8-wTAttW3WVa_X9JVC, ._3oavRVhIS9tC3vBsFT4Ggi/*下载设置按钮，下载按钮*/ {
+	background: rgba(var(--main), 0.3) !important;
+}

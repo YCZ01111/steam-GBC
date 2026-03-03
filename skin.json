@@ -11,8 +11,43 @@
         "Example",
         "Template"
     ],
-    "version": "3.0.2",
-
+    "version": "4.0.0",
     "Steam-WebKit": "webkit.css",
-    "UseDefaultPatches": true
+    "Patches": [
+        {
+            "MatchRegexString": "^Steam$",
+            "TargetCss": "libraryroot.custom.css",
+            "TargetJs": "libraryroot.custom.js"
+        },
+        {
+            "MatchRegexString": ".friendsui-container",
+            "TargetCss": "friends.custom.css",
+            "TargetJs": "friends.custom.js"
+        }
+    ],
+    "Conditions": {
+        "\u4e3b\u9898\u5207\u6362": {
+            "description": "\u5207\u6362\u9ed1\u6697\u4e3b\u9898\u6216\u660e\u4eae\u4e3b\u9898",
+            "default": "dark",
+            "tab": "\u901a\u7528",
+            "values": {
+                "dark": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "dark.css"
+                    }
+                },
+                "light": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "light.css"
+                    }
+                }
+            }
+        }
+    }
 }

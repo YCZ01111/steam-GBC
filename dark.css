@@ -1,0 +1,15 @@
+:root {
+	/* 
+    * @name master 
+    * @description darktheme
+    */
+	--main: 0, 0, 0;
+	--list-1: 41, 47, 59;
+	--list-2: 62, 78, 105;
+	--raw-rgba: 123, 123, 123, 0.5;
+	--msg-hover: #292c34;
+}
+
+._2-O4ZG0KrnSrzISHBKctFQ:hover/*库列表悬停*/ {
+	background-color: rgba(50, 58, 75, 0.5)
+}
