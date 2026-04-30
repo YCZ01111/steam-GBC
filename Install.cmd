@@ -27,7 +27,7 @@ if not exist "%SteamPath%" (
     exit
 )
 for %%I in (.) do set CurDirName=%%~nxI
-if exist "%SteamPath%\millennium\themes\%CurDirName%" (
+if exist "%SteamPath%\steamui\skins\%CurDirName%" (
     goto Override
 ) else (
     goto Apply
@@ -40,7 +40,7 @@ exit /b
 
 :Error
 echo.
-call :_color2 %_White% "" %Red% "皮肤安装失败，请手动复制整个myskin文件夹到steam/millennium/themes"
+call :_color2 %_White% "" %Red% "皮肤安装失败，请手动复制整个myskin文件夹到steam/steamui/skins"
 echo.
 exit /b
 
@@ -51,36 +51,36 @@ if "%Override%"=="Y" goto Apply
 exit
 
 :Apply
-del /f /q "%SteamPath%\millennium\themes\%CurDirName%"
-mkdir "%SteamPath%\millennium\themes"
-xcopy /e /y "..\%CurDirName%\" "%SteamPath%\millennium\themes\%CurDirName%\"
-del /f /q "%SteamPath%\millennium\themes\%CurDirName%\Install.cmd"
+del /f /q "%SteamPath%\steamui\skins\%CurDirName%"
+mkdir "%SteamPath%\steamui\skins"
+xcopy /e /y "..\%CurDirName%\" "%SteamPath%\steamui\skins\%CurDirName%\"
+del /f /q "%SteamPath%\steamui\skins\%CurDirName%\Install.cmd"
 echo.
-if exist "%SteamPath%\millennium\themes\%CurDirName%\skin.json" (
-    if exist "%SteamPath%\millennium\themes\%CurDirName%\libraryroot.custom.css" (
-        if exist "%SteamPath%\millennium\themes\%CurDirName%\webkit.css" (
+if exist "%SteamPath%\steamui\skins\%CurDirName%\skin.json" (
+    if exist "%SteamPath%\steamui\skins\%CurDirName%\libraryroot.custom.css" (
+        if exist "%SteamPath%\steamui\skins\%CurDirName%\webkit.css" (
             echo.
             call :_color2 %_White% "" %Green% "皮肤安装成功"
             echo.
             echo 请按“回车”前往自定义......&pause>nul
-            cd /d "%SteamPath%\millennium\themes\%CurDirName%"
+            cd /d "%SteamPath%\steamui\skins\%CurDirName%"
             start skintool.exe .
         ) else (
             call :Error
             echo 请按“回车”打开skins文件夹......&pause>nul
-            cd /d "%SteamPath%\millennium\themes"
+            cd /d "%SteamPath%\steamui\skins"
             start explorer.exe .
         )
     ) else (
         call :Error
         echo 请按“回车”打开skins文件夹......&pause>nul
-        cd /d "%SteamPath%\millennium\themes"
+        cd /d "%SteamPath%\steamui\skins"
         start explorer.exe .
     )
 ) else (
     call :Error
     echo 请按“回车”打开skins文件夹......&pause>nul
-    cd /d "%SteamPath%\millennium\themes"
+    cd /d "%SteamPath%\steamui\skins"
     start explorer.exe .
 )
 if exist "%~dp0\..\rename.cmd" (
