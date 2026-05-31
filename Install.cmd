@@ -62,9 +62,7 @@ if exist "%SteamPath%\millennium\themes\%CurDirName%\skin.json" (
             echo.
             call :_color2 %_White% "" %Green% "皮肤安装成功"
             echo.
-            echo 请按“回车”前往自定义......&pause>nul
-            cd /d "%SteamPath%\millennium\themes\%CurDirName%"
-            start skintool.exe .
+            echo 请按任意键关闭......&pause>nul
         ) else (
             call :Error
             echo 请按“回车”打开skins文件夹......&pause>nul
