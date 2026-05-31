@@ -4,24 +4,23 @@
 
 html.client_chat_frame body, html.web_chat_frame body {
 	background-image: url("friends.jpg");
-	background-position: center center;
 	background-size: cover;
 }
 
 .friendListHeaderContainer, .friendListFooter/*上，下*/ {
-	background-color: rgba(var(--main), 0.3) !important;
+	background-color: rgba(var(--main), var(--fd-border-transparency)) !important;
 }
 
 .activeTab, .friendsListSectionTitle/*好友，群组聊天*/ {
-	background-color: rgba(var(--main), 0.7) !important;
+	background-color: rgba(var(--main), var(--fd-group-transparency)) !important;
 }
 
 .friendlistListContainer, .chatRoomListContainer/*好友列表，群组列表*/ {
-	background: rgba(var(--main), 0.5) !important;
+	background: rgba(var(--main), var(--fd-list-transparency)) !important;
 }
 
 .titleBarContainer.ChatTabs, .chatEntry/*聊天标题栏，聊天页面下栏总*/{
-	background-color: rgba(var(--main), 0.3) !important;
+	background-color: rgba(var(--main), var(--ch-border-transparency)) !important;
 }
 
 .chatWindow .chatHeader /*聊天框顶部条*/{
@@ -29,7 +28,7 @@ html.client_chat_frame body, html.web_chat_frame body {
 }
 
 ._2XZq-_f6npaQdAgeRzKIkz.Yd-DsWkYiFiYwpci--Yk_/*好友标签*/ {
-	background-color: rgba(var(--main), 0.1) !important;
+	background-color: rgba(var(--main), var(--ch-tag-transparency)) !important;
 }
 
 .chatDialogs, .chatWindow/*聊天框+下栏*/{
@@ -37,11 +36,11 @@ html.client_chat_frame body, html.web_chat_frame body {
 }
 
 .chatHistoryScroll /*聊天记录*/{
-	background-color: rgba(var(--main), 0.5) !important;
+	background-color: rgba(var(--main), var(--ch-history-transparency)) !important;
 }
 
 ._3Ule3rolhZJiBN4yNNtk1s/*输入框*/{
-	background-color: rgba(var(--main), 0.1) !important;
+	background-color: rgba(var(--main), var(--ch-input-transparency)) !important;
 }
 
 .msg:hover/*消息悬停*/ {

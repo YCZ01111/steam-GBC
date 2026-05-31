@@ -11,7 +11,7 @@
         "Example",
         "Template"
     ],
-    "version": "4.0.1",
+    "version": "5.0.0",
     "Steam-WebKit": "webkit.css",
     "Patches": [
         {
@@ -26,10 +26,233 @@
         }
     ],
     "Conditions": {
-        "\u4e3b\u9898\u5207\u6362": {
-            "description": "\u5207\u6362\u9ed1\u6697\u4e3b\u9898\u6216\u660e\u4eae\u4e3b\u9898",
+        "顶部&底部": {
+            "description": "上下边框透明度，默认50%",
+            "default": 50,
+            "tab": "主界面",
+            "slider": {
+                "cssVariable": "--st-border-transparency",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+        },
+		"商店": {
+			"description": "商店背景透明度，默认30%",
+            "default": 30,
+            "tab": "主界面",
+            "slider": {
+                "cssVariable": "--st-store-transparency",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+		},
+		"库&下载": {
+			"description": "库背景和下载背景透明度，默认30%",
+            "default": 30,
+            "tab": "主界面",
+            "slider": {
+                "cssVariable": "--st-main-transparency",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+		},
+		"游戏列表": {
+			"description": "库左侧游戏列表透明度，默认30%",
+            "default": 30,
+            "tab": "主界面",
+            "slider": {
+                "cssVariable": "--st-list-transparency",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+		},
+		"分组标签": {
+			"description": "游戏列表中的分组标签透明度，默认0",
+            "default": 0,
+            "tab": "主界面",
+            "slider": {
+                "cssVariable": "--st-group-transparency",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+		},
+		"背景位置": {
+			"description": "背景图片的位置，默认居中",
+            "default": "居中",
+            "tab": "好友界面",
+            "values": {
+                "居中": {
+                    "TargetCss": {
+                        "affects": [
+                            ".friendsui-container"
+                        ],
+                        "src": "friends/center-center.css"
+                    }
+                },
+                "上居中": {
+                    "TargetCss": {
+                        "affects": [
+                            ".friendsui-container"
+                        ],
+                        "src": "friends/center-top.css"
+                    }
+                },
+				"下居中": {
+                    "TargetCss": {
+                        "affects": [
+                            ".friendsui-container"
+                        ],
+                        "src": "friends/center-bottom.css"
+                    }
+                },
+				"左上": {
+                    "TargetCss": {
+                        "affects": [
+                            ".friendsui-container"
+                        ],
+                        "src": "friends/left-top.css"
+                    }
+                },
+				"左居中": {
+                    "TargetCss": {
+                        "affects": [
+                            ".friendsui-container"
+                        ],
+                        "src": "friends/left-center.css"
+                    }
+                },
+				"左下": {
+                    "TargetCss": {
+                        "affects": [
+                            ".friendsui-container"
+                        ],
+                        "src": "friends/left-bottom.css"
+                    }
+                },
+				"右上": {
+                    "TargetCss": {
+                        "affects": [
+                            ".friendsui-container"
+                        ],
+                        "src": "friends/right-top.css"
+                    }
+                },
+				"右居中": {
+                    "TargetCss": {
+                        "affects": [
+                            ".friendsui-container"
+                        ],
+                        "src": "friends/right-center.css"
+                    }
+                },
+				"右下": {
+                    "TargetCss": {
+                        "affects": [
+                            ".friendsui-container"
+                        ],
+                        "src": "friends/right-bottom.css"
+                    }
+                }
+            }
+		},
+		"顶&底": {
+			"description": "上下边框透明度，默认30%",
+            "default": 30,
+            "tab": "好友界面",
+            "slider": {
+                "cssVariable": "--fd-border-transparency",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+		},
+		"好友&群组标签": {
+			"description": "好友标签和群组标签透明度，默认70%",
+            "default": 70,
+            "tab": "好友界面",
+            "slider": {
+                "cssVariable": "--fd-group-transparency",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+		},
+		"好友&群组列表": {
+			"description": "好友列表和群组列表透明度，默认50%",
+            "default": 50,
+            "tab": "好友界面",
+            "slider": {
+                "cssVariable": "--fd-list-transparency",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+		},
+		"聊天窗顶&底": {
+			"description": "聊天窗顶部和底部透明度，默认30%",
+            "default": 30,
+            "tab": "好友界面",
+            "slider": {
+                "cssVariable": "--ch-border-transparency",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+		},
+		"聊天窗标签": {
+			"description": "聊天窗口顶部标签透明度，默认10%",
+            "default": 10,
+            "tab": "好友界面",
+            "slider": {
+                "cssVariable": "--ch-tag-transparency",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+		},
+		"聊天记录": {
+			"description": "聊天窗口聊天记录部分透明度，默认50%",
+            "default": 50,
+            "tab": "好友界面",
+            "slider": {
+                "cssVariable": "--ch-history-transparency",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+		},
+		"聊天输入": {
+			"description": "聊天窗口输入框部分透明度，默认10%",
+            "default": 10,
+            "tab": "好友界面",
+            "slider": {
+                "cssVariable": "--ch-input-transparency",
+                "min": 0,
+                "max": 100,
+                "step": 10,
+                "unit": "%"
+            }
+		},
+		"主题切换": {
+            "description": "切换黑暗主题或明亮主题",
             "default": "dark",
-            "tab": "\u901a\u7528",
+            "tab": "通用",
             "values": {
                 "dark": {
                     "TargetCss": {

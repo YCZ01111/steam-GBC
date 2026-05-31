@@ -1,0 +1,3 @@
+html.client_chat_frame body, html.web_chat_frame body {
+	background-position: right bottom;
+}

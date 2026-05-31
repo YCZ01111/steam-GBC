@@ -13,7 +13,7 @@
 }
 
 ._3Z7VQ1IMk4E3HsHvrkLNgo, ._2CmrnGY-Amtd83ScJkFvx2, .UkR3sY319PuaUNuUWks2K, ._3vCzSrrXZzZjVJFZNg9SGu /*标题栏第一层，标题栏下方那一条（库第二层的第一个元素），商店网址栏，下栏第二层*/ {
-	background: rgba(var(--main), 0.5) !important;
+	background: rgba(var(--main), var(--st-border-transparency)) !important;
 }
 
 ._3pSPluBgf0NeR1kkCLWMhR, ._2PF_m-I5yte3WnQhpcz8RC, ._20QAC4WMXm8qFE8waUT5oo/*库列表顶部第一类第三层第一类，第二类第三层第一类，第三类*/ {
@@ -25,7 +25,7 @@
 }
 
 ._3x1HklzyDs4TEjACrRO2tB /*库游戏列表第二层*/{
-	background: rgba(var(--main), 0.3) !important;
+	background: rgba(var(--main), var(--st-list-transparency)) !important;
 }
 
 ._2gSXCB6PbOlMxslr8hm6dm/*库右侧第四层第二类*/ {
@@ -33,7 +33,7 @@
 }
 
 ._2Dd4T78PcCTUVgOtDGFY5j, ._2g5K_hJWc7jVo81zuejhk2/*库右侧第二层和缝第二类*/ {
-	background: rgba(var(--main), 0.3) !important;
+	background: rgba(var(--main), var(--st-main-transparency)) !important;
 }
 
 ._17uEBe5Ri8TMsnfELvs8-N/*新情报速递*/ {
@@ -69,7 +69,7 @@
 }
 
 ._2sYIghGVXJr6tsQVvcryy8/*游戏分组标签第一类*/ {
-	background: linear-gradient(to right, rgba(var(--list-1), 0) 40%, rgba(var(--list-2), 0) 100%) !important;
+	background: linear-gradient(to right, rgba(var(--list-1), var(--st-group-transparency)) 40%, rgba(var(--list-2), 0) 100%) !important;
 }
 
 .Jbe--NUNw7sxbxGsMSjVa/*游戏内容中间部分*/ {
