@@ -26,6 +26,29 @@
         }
     ],
     "Conditions": {
+		"主题切换": {
+            "description": "切换黑暗主题或明亮主题",
+            "default": "dark",
+            "tab": "通用",
+            "values": {
+                "dark": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "dark.css"
+                    }
+                },
+                "light": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "light.css"
+                    }
+                }
+            }
+        },
         "顶部&底部": {
             "description": "上下边框透明度，默认50%",
             "default": 50,
@@ -248,29 +271,6 @@
                 "step": 10,
                 "unit": "%"
             }
-		},
-		"主题切换": {
-            "description": "切换黑暗主题或明亮主题",
-            "default": "dark",
-            "tab": "通用",
-            "values": {
-                "dark": {
-                    "TargetCss": {
-                        "affects": [
-                            ".*"
-                        ],
-                        "src": "dark.css"
-                    }
-                },
-                "light": {
-                    "TargetCss": {
-                        "affects": [
-                            ".*"
-                        ],
-                        "src": "light.css"
-                    }
-                }
-            }
-        }
+		}
     }
 }
