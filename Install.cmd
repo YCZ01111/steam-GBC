@@ -23,7 +23,7 @@ FOR /F "tokens=2* skip=2" %%a in ('reg query "HKCU\Software\Valve\Steam" /v "Ste
 REM If return value is not an exist path(Err Msg)
 if not exist "%SteamPath%" (
     call :Error
-    echo Çë°´ÈÎÒâ¼ü¼ÌÐø......&pause>nul
+    echo è¯·æŒ‰ä»»æ„é”®ç»§ç»­......&pause>nul
     exit
 )
 for %%I in (.) do set CurDirName=%%~nxI
@@ -40,12 +40,12 @@ exit /b
 
 :Error
 echo.
-call :_color2 %_White% "" %Red% "Æ¤·ô°²×°Ê§°Ü£¬ÇëÊÖ¶¯¸´ÖÆÕû¸ömyskinÎÄ¼þ¼Ðµ½steam/millennium/themes"
+call :_color2 %_White% "" %Red% "çš®è‚¤å®‰è£…å¤±è´¥ï¼Œè¯·æ‰‹åŠ¨å¤åˆ¶æ•´ä¸ªmyskinæ–‡ä»¶å¤¹åˆ°steam/millennium/themes"
 echo.
 exit /b
 
 :Override
-set /P Override=¸ÃÆ¤·ôÒÑ´æÔÚ£¬ÊÇ·ñ¸²¸Ç£¿[y/N]
+set /P Override=è¯¥çš®è‚¤å·²å­˜åœ¨ï¼Œæ˜¯å¦è¦†ç›–ï¼Ÿ[y/N]
 if "%Override%"=="y" goto Apply 
 if "%Override%"=="Y" goto Apply
 exit
@@ -60,24 +60,24 @@ if exist "%SteamPath%\millennium\themes\%CurDirName%\skin.json" (
     if exist "%SteamPath%\millennium\themes\%CurDirName%\libraryroot.custom.css" (
         if exist "%SteamPath%\millennium\themes\%CurDirName%\webkit.css" (
             echo.
-            call :_color2 %_White% "" %Green% "Æ¤·ô°²×°³É¹¦"
+            call :_color2 %_White% "" %Green% "çš®è‚¤å®‰è£…æˆåŠŸ"
             echo.
-            echo Çë°´ÈÎÒâ¼ü¹Ø±Õ......&pause>nul
+            echo è¯·æŒ‰ä»»æ„é”®å…³é—­......&pause>nul
         ) else (
             call :Error
-            echo Çë°´¡°»Ø³µ¡±´ò¿ªskinsÎÄ¼þ¼Ð......&pause>nul
+            echo è¯·æŒ‰â€œå›žè½¦â€æ‰“å¼€skinsæ–‡ä»¶å¤¹......&pause>nul
             cd /d "%SteamPath%\millennium\themes"
             start explorer.exe .
         )
     ) else (
         call :Error
-        echo Çë°´¡°»Ø³µ¡±´ò¿ªskinsÎÄ¼þ¼Ð......&pause>nul
+        echo è¯·æŒ‰â€œå›žè½¦â€æ‰“å¼€skinsæ–‡ä»¶å¤¹......&pause>nul
         cd /d "%SteamPath%\millennium\themes"
         start explorer.exe .
     )
 ) else (
     call :Error
-    echo Çë°´¡°»Ø³µ¡±´ò¿ªskinsÎÄ¼þ¼Ð......&pause>nul
+    echo è¯·æŒ‰â€œå›žè½¦â€æ‰“å¼€skinsæ–‡ä»¶å¤¹......&pause>nul
     cd /d "%SteamPath%\millennium\themes"
     start explorer.exe .
 )

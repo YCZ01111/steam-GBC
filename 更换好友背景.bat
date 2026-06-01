@@ -7,19 +7,21 @@ title 一键替换好友列表背景脚本
 :: 1. 获取当前脚本所在绝对目录
 set "SCRIPT_DIR=%~dp0"
 
-:: 2. 判断是否有文件拖入
-if "%~1"=="" (
-    echo [错误] 请将需要替换的图片文件拖动到此脚本 ^(.bat^) 图标上！
-    echo.
-    echo 支持的图片格式: .jpg, .jpeg, .png
-    echo.
-    pause
-    exit /b
-)
-
-:: 3. 提取拖入文件信息并设为环境变量
+:: 2. 判断是否有文件拖入到图标上
+if not "%~1"=="" goto :GotFile
+echo [提示] 请将需要替换的图片文件拖入此窗口，然后按回车键。
+echo.
+echo 支持的图片格式: .jpg, .jpeg, .png
+echo.
+set /p "SOURCE_FILE="
+for /f "delims=" %%A in ("%SOURCE_FILE%") do set "SOURCE_FILE=%%~A"
+goto :FileReady
+:GotFile
 set "SOURCE_FILE=%~1"
-set "FILE_EXT=%~x1"
+:FileReady
+
+:: 3. 提取文件信息并设为环境变量
+for %%F in ("%SOURCE_FILE%") do set "FILE_EXT=%%~xF"
 set "CSS_FILE=%SCRIPT_DIR%friends.custom.css"
 
 :: 4. 检查文件类型
@@ -36,6 +38,7 @@ if "!IS_VALID!"=="0" (
 )
 
 :: 5. 智能清理与复制
+echo.
 echo [状态] 检测到图片文件，正在清理旧的 friends 格式文件...
 
 :: 安全清理：遍历可能的后缀，只要它不是你正在拖入的文件本身，就删掉它
