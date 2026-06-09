@@ -11,44 +11,21 @@
         "Example",
         "Template"
     ],
-    "version": "5.0.2",
-    "Steam-WebKit": "webkit.css",
+    "version": "5.1.0",
+    "Steam-WebKit": "src/css/store/webkit.css",
     "Patches": [
         {
             "MatchRegexString": "^Steam$",
-            "TargetCss": "libraryroot.custom.css",
-            "TargetJs": "libraryroot.custom.js"
+            "TargetCss": "src/css/libraryroot/libraryroot.custom.css",
+            "TargetJs": "src/js/libraryroot/libraryroot.custom.js"
         },
         {
             "MatchRegexString": ".friendsui-container",
-            "TargetCss": "friends.custom.css",
-            "TargetJs": "friends.custom.js"
+            "TargetCss": "src/css/friends/friends.custom.css",
+            "TargetJs": "src/js/friends/friends.custom.js"
         }
     ],
     "Conditions": {
-		"主题切换": {
-            "description": "切换黑暗主题或明亮主题",
-            "default": "dark",
-            "tab": "通用",
-            "values": {
-                "dark": {
-                    "TargetCss": {
-                        "affects": [
-                            ".*"
-                        ],
-                        "src": "dark.css"
-                    }
-                },
-                "light": {
-                    "TargetCss": {
-                        "affects": [
-                            ".*"
-                        ],
-                        "src": "light.css"
-                    }
-                }
-            }
-        },
         "顶部&底部": {
             "description": "上下边框透明度，默认50%",
             "default": 50,
@@ -119,7 +96,7 @@
                         "affects": [
                             ".friendsui-container"
                         ],
-                        "src": "friends/center-center.css"
+                        "src": "src/css/friends/position/center-center.css"
                     }
                 },
                 "上居中": {
@@ -127,7 +104,7 @@
                         "affects": [
                             ".friendsui-container"
                         ],
-                        "src": "friends/center-top.css"
+                        "src": "src/css/friends/position/center-top.css"
                     }
                 },
 				"下居中": {
@@ -135,7 +112,7 @@
                         "affects": [
                             ".friendsui-container"
                         ],
-                        "src": "friends/center-bottom.css"
+                        "src": "src/css/friends/position/center-bottom.css"
                     }
                 },
 				"左上": {
@@ -143,7 +120,7 @@
                         "affects": [
                             ".friendsui-container"
                         ],
-                        "src": "friends/left-top.css"
+                        "src": "src/css/friends/position/left-top.css"
                     }
                 },
 				"左居中": {
@@ -151,7 +128,7 @@
                         "affects": [
                             ".friendsui-container"
                         ],
-                        "src": "friends/left-center.css"
+                        "src": "src/css/friends/position/left-center.css"
                     }
                 },
 				"左下": {
@@ -159,7 +136,7 @@
                         "affects": [
                             ".friendsui-container"
                         ],
-                        "src": "friends/left-bottom.css"
+                        "src": "src/css/friends/position/left-bottom.css"
                     }
                 },
 				"右上": {
@@ -167,7 +144,7 @@
                         "affects": [
                             ".friendsui-container"
                         ],
-                        "src": "friends/right-top.css"
+                        "src": "src/css/friends/position/right-top.css"
                     }
                 },
 				"右居中": {
@@ -175,7 +152,7 @@
                         "affects": [
                             ".friendsui-container"
                         ],
-                        "src": "friends/right-center.css"
+                        "src": "src/css/friends/position/right-center.css"
                     }
                 },
 				"右下": {
@@ -183,7 +160,7 @@
                         "affects": [
                             ".friendsui-container"
                         ],
-                        "src": "friends/right-bottom.css"
+                        "src": "src/css/friends/position/right-bottom.css"
                     }
                 }
             }
@@ -271,6 +248,29 @@
                 "step": 10,
                 "unit": "%"
             }
-		}
+		},
+        "主题切换": {
+            "description": "切换黑暗主题或明亮主题",
+            "default": "dark",
+            "tab": "通用",
+            "values": {
+                "dark": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "src/css/root/dark.css"
+                    }
+                },
+                "light": {
+                    "TargetCss": {
+                        "affects": [
+                            ".*"
+                        ],
+                        "src": "src/css/root/light.css"
+                    }
+                }
+            }
+        }
     }
 }

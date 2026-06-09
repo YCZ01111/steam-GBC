@@ -22,7 +22,7 @@ set "SOURCE_FILE=%~1"
 
 :: 3. 提取文件信息并设为环境变量
 for %%F in ("%SOURCE_FILE%") do set "FILE_EXT=%%~xF"
-set "CSS_FILE=%SCRIPT_DIR%friends.custom.css"
+set "CSS_FILE=%SCRIPT_DIR%src\css\friends\friends.custom.css"
 
 :: 4. 检查文件类型
 set "IS_VALID=0"
@@ -43,15 +43,15 @@ echo [状态] 检测到图片文件，正在清理旧的 friends 格式文件...
 
 :: 安全清理：遍历可能的后缀，只要它不是你正在拖入的文件本身，就删掉它
 for %%x in (jpg jpeg png) do (
-    if /I not "%SOURCE_FILE%"=="%SCRIPT_DIR%friends.%%x" (
-        if exist "%SCRIPT_DIR%friends.%%x" del /f /q "%SCRIPT_DIR%friends.%%x"
+    if /I not "%SOURCE_FILE%"=="%SCRIPT_DIR%src\css\friends\friends.%%x" (
+        if exist "%SCRIPT_DIR%src\css\friends\friends.%%x" del /f /q "%SCRIPT_DIR%src\css\friends\friends.%%x"
     )
 )
 
 echo [状态] 正在复制新图片...
-:: 避免同目录拖拽产生“不能覆盖自身”的报错
-if /I not "%SOURCE_FILE%"=="%SCRIPT_DIR%friends%FILE_EXT%" (
-    copy /y "%SOURCE_FILE%" "%SCRIPT_DIR%friends%FILE_EXT%" >nul
+:: 避免同目录拖拽产生"不能覆盖自身"的报错
+if /I not "%SOURCE_FILE%"=="%SCRIPT_DIR%src\css\friends\friends%FILE_EXT%" (
+    copy /y "%SOURCE_FILE%" "%SCRIPT_DIR%src\css\friends\friends%FILE_EXT%" >nul
 )
 
 :: 6. 无缝调用下方的 PowerShell 核心代码处理 CSS 后缀

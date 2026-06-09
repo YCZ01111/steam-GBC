@@ -1,4 +1,5 @@
 @echo off
+chcp 65001 >nul
 fltmc >nul 2>&1 || (
     powershell -Command "Start-Process -FilePath '%0' -Verb RunAs" >nul 2>&1 && exit
 )
@@ -57,18 +58,11 @@ xcopy /e /y "..\%CurDirName%\" "%SteamPath%\millennium\themes\%CurDirName%\"
 del /f /q "%SteamPath%\millennium\themes\%CurDirName%\Install.cmd"
 echo.
 if exist "%SteamPath%\millennium\themes\%CurDirName%\skin.json" (
-    if exist "%SteamPath%\millennium\themes\%CurDirName%\libraryroot.custom.css" (
-        if exist "%SteamPath%\millennium\themes\%CurDirName%\webkit.css" (
-            echo.
-            call :_color2 %_White% "" %Green% "皮肤安装成功"
-            echo.
-            echo 请按任意键关闭......&pause>nul
-        ) else (
-            call :Error
-            echo 请按“回车”打开skins文件夹......&pause>nul
-            cd /d "%SteamPath%\millennium\themes"
-            start explorer.exe .
-        )
+    if exist "%SteamPath%\millennium\themes\%CurDirName%\src" (
+        echo.
+        call :_color2 %_White% "" %Green% "皮肤安装成功"
+        echo.
+        echo 请按任意键关闭......&pause>nul
     ) else (
         call :Error
         echo 请按“回车”打开skins文件夹......&pause>nul

@@ -5,7 +5,7 @@ const video = document.createElement('video');
 video.preload = 'auto';
 
 // 设置视频源
-video.src = 'main.webm';
+video.src = 'background/GBC/main.webm';
 
 // 设置视频属性
 video.autoplay = true;
